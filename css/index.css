@@ -32,6 +32,8 @@ body {
   justify-content: space-between;
 }
 
+/* Regole member */
+
 .member {
   width: calc(100% / 3 - 15px);
   margin-right: 5px;

@@ -1,3 +1,5 @@
+// Inizializzazione array
+
 let team = [
 
   {
@@ -37,7 +39,11 @@ let team = [
   },
 ];
 
+// Acquisisco l'elemento container dall'HTML
+
 const container = document.getElementById("container");
+
+// Stampo in console le informazioni dell'array
 
 for(let i = 0; i < team.length; i++) {
 
@@ -49,6 +55,8 @@ for(let i = 0; i < team.length; i++) {
 
   }
 }
+
+// acquisisco i valori degli objects presenti nell'array
 
 for(let i = 0; i < team.length; i++) {
 
@@ -66,8 +74,12 @@ for(let i = 0; i < team.length; i++) {
 
 function createDiv(name, role, image) {
 
+  // Creo un div nel quale inserire tutte le informazioni presenti nell'object
+
   var container = document.createElement("div");
   container.classList.add("member");
+
+  // Creo i div dei singoli elementi 
 
   var nameValue = document.createElement("div");
   nameValue.innerHTML = name;
@@ -85,10 +97,14 @@ function createDiv(name, role, image) {
   imageElement.classList.add("member-image");
   imageElement.src = "img/" + image;
 
+  // Inserisco nel div contenitore tutti gli elementi dell'object
+
   container.appendChild(imageContainer);
   container.appendChild(nameValue);
   container.appendChild(roleValue);
 
+  // Inserisco nella pagina il div contenitore
+  
   document.getElementById("container").appendChild(container);
 
 }

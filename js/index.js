@@ -65,19 +65,30 @@ for(let i = 0; i < team.length; i++) {
 // Creazione dei div conteniroti di ciascuno elemento dell'array
 
 function createDiv(name, role, image) {
+
+  var container = document.createElement("div");
+  container.classList.add("member");
+
+  var nameValue = document.createElement("div");
+  nameValue.innerHTML = name;
+  nameValue.classList.add("member-name");
+
+  var roleValue = document.createElement("div");
+  roleValue.innerHTML = role;
+  roleValue.classList.add("member-role");
   
-  var div = document.createElement("div");
-  div.style.marginBottom = "30px";
+  var imageContainer = document.createElement("div");
 
-  var imageContainer = document.createElement("img");
-  imageContainer.style.width = "100px";
-  imageContainer.src = "img/" + image; 
-  console.log(imageContainer);
+  var imageElement = document.createElement("img");
 
-  document.getElementById("container").appendChild(imageContainer);
+  imageContainer.appendChild(imageElement);
+  imageElement.classList.add("member-image");
+  imageElement.src = "img/" + image;
 
-  div.innerHTML = name + " " + role;
+  container.appendChild(imageContainer);
+  container.appendChild(nameValue);
+  container.appendChild(roleValue);
 
-  document.getElementById("container").appendChild(div);
+  document.getElementById("container").appendChild(container);
 
 }

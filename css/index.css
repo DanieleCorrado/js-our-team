@@ -7,5 +7,52 @@
 }
 
 body {
-  background-color: violet;
+  background-color: rgb(245, 245, 241);
+}
+
+/* Regole description */
+
+#description{
+  width: 50%;
+  margin: 40px auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
+/* Regole container */
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.member {
+  width: calc(100% / 3 - 15px);
+  margin-right: 5px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.member-image {
+  width: 60%;
+}
+
+.member-name, .member-role {
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.member-name {
+  padding-top: 5px;
+}
+
+.member-role {
+  padding-bottom: 5px;
 }

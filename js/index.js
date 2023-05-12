@@ -1,42 +1,75 @@
 let team = [
 
   {
-    "nome" :"Wayne Barnett",
+    "name" :"Wayne Barnett",
      "role" : "Founder & CEO",
      "image" : "wayne-barnett-founder-ceo.jpg"
   },
 
   {
-    "nome" :"Angela Caroll",
+    "name" :"Angela Caroll",
      "role" : "Chief Editor",
      "image" : "angela-caroll-chief-editor.jpg"
   },
 
   {
-    "nome" :"Walter Gordon",
+    "name" :"Walter Gordon",
      "role" : "Office Manager",
      "image" : "walter-gordon-office-manager.jpg"
   },
 
   {
-    "nome" :"Angela Lopez",
+    "name" :"Angela Lopez",
      "role" : "Social Media Manager",
      "image" : "angela-lopez-social-media-manager.jpg"
   },
 
   {
-    "nome" :"Scott estrada",
+    "name" :"Scott estrada",
      "role" : "Developer",
      "image" : "scott-estrada-developer.jpg"
   },
 
   {
-    "nome" :"Barbara Ramos",
+    "name" :"Barbara Ramos",
      "role" : "Graphic Designer",
      "image" : "barbara-ramos-graphic-designer.jpg"
   },
 ];
 
-for (let key in team) {
-  console.log(team[key]);
+const container = document.getElementById("container");
+
+for(let i = 0; i < team.length; i++) {
+  
+  let object = team[i];
+  
+  for (let objectKey in object) {
+
+    console.log(object[objectKey]);
+
+  }
+}
+
+for(let i = 0; i < team.length; i++) {
+
+  let name = team[i].name;
+  let role = team[i].role;
+  let image = team[i].image;
+
+  createDiv(name, role, image);
+  
+}
+
+// Funzioni
+
+// Creazione dei vid conteniroti di ciascuno elemento dell'array
+
+function createDiv(name, role, image) {
+  
+  var div = document.createElement("div");
+  div.style.marginBottom = "30px";
+  div.innerHTML = name + " " + role + " " + " " + image;
+
+  document.getElementById("container").appendChild(div);
+
 }

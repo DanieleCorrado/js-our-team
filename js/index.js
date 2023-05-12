@@ -40,7 +40,7 @@ let team = [
 const container = document.getElementById("container");
 
 for(let i = 0; i < team.length; i++) {
-  
+
   let object = team[i];
   
   for (let objectKey in object) {
@@ -62,13 +62,21 @@ for(let i = 0; i < team.length; i++) {
 
 // Funzioni
 
-// Creazione dei vid conteniroti di ciascuno elemento dell'array
+// Creazione dei div conteniroti di ciascuno elemento dell'array
 
 function createDiv(name, role, image) {
   
   var div = document.createElement("div");
   div.style.marginBottom = "30px";
-  div.innerHTML = name + " " + role + " " + " " + image;
+
+  var imageContainer = document.createElement("img");
+  imageContainer.style.width = "100px";
+  imageContainer.src = "img/" + image; 
+  console.log(imageContainer);
+
+  document.getElementById("container").appendChild(imageContainer);
+
+  div.innerHTML = name + " " + role;
 
   document.getElementById("container").appendChild(div);
 
